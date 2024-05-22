@@ -1,95 +1,61 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
+// import Image from "next/image";
+// import styles from "./page.module.css";
+import nodemailer from "nodemailer";
+import { useEffect } from "react";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+// export default function Home() {
+//     useEffect(() => {
+//         return () => {
+//             console.log("Home");
+//         };
+//     }, []);
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+//     return (
+//         <main>
+//             HELLOW WORLDDD <button onClick={() => console.log("asd")}>CLICK</button>
+//         </main>
+//     );
+// }
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+// export default async function handler(req:any, res:any) {
+//     console.log('SENDING EMAIL')
+//     try {
+//         // Create a Nodemailer transporter
+//         const transporter = nodemailer.createTransport({
+//             host: "smtp.gmail.com", // e.g., 'smtp.gmail.com'
+//             port: 587, // or the appropriate port for your SMTP host
+//             secure: false, // true for 465, false for other ports
+//             auth: {
+//                 user: "xaliscoral@gmail.com", // your SMTP username
+//                 pass: "8my5tYm5", // your SMTP password
+//             },
+//         });
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+//         // Define the email options
+//         const mailOptions = {
+//             from: "xaliscoral@gmail.com", // sender address
+//             to: "qwyzex@gmail.com", // list of receivers
+//             subject: "Daily Email", // Subject line
+//             text: "This is a daily email sent from your Next.js app.", // plain text body
+//             // html: '<b>This is a daily email sent from your Next.js app.</b>', // html body
+//         };
+
+//         // Send the email
+//         await transporter.sendMail(mailOptions);
+
+//         res.status(200).json({ message: "Email sent successfully" });
+//     } catch (error) {
+//         console.error("Error sending email:", error);
+//         res.status(500).json({ message: "Error sending email" });
+//     }
+// }
+
+
+
+
+export default async function home() {
+    return console.log("Home", home.toString());
 }
